@@ -1,0 +1,8 @@
+Follow the below Instructions to run the project.
+Clone the project repository or download the source code.
+Activate virtual environment for the project inside Task_pro/environ/scripts/Activate.
+Set up the database by running python manage.py migrate.
+Create a superuser by running python manage.py createsuperuser and follow the prompts to create an admin account.
+Start the development server by running python manage.py runserver.
+Navigate to the URL provided by the development server to access the project in your web browser.
+Use Postman or a similar tool to test the REST API endpoints.
