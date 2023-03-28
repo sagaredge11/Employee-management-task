@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Employee Management{% endblock %}</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="{% url 'employee_list' %}">Employee List</a></li>
+      <li><a href="{% url 'employee_search' %}">Search Employees</a></li>
+    </ul>
+  </nav>
+  {% block content %}{% endblock %}

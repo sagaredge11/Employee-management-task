@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Search Employees</h1>
+  <form method="GET">
+    <input type="text" name="q" value="{{ request.GET.q }}">
+    <button type="submit">Search</button>
+  </form>
+  {% if employees %}
+    <ul>
+      {% for employee in employees %}
+        <li><a href="{% url 'employee_detail' employee.pk %}">{{ employee.name }}</a></li>
+      {% empty %}
+        <li>No employees found.</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ employee.name }}</h1>
+  <p>Email: {{ employee.email }}</p>
+  <p>Department: {{ employee.department }}</p>
+  <p>Designation: {{ employee.designation }}</p>
+  <p>Salary: {{ employee.salary }}</p>
+  <p>Photo: <a href="{{ employee.photo.url }}">{{ employee.photo.name }}</a></p>
+  <a href="{% url 'employee_edit' employee.pk %}">Edit</a>
+  <a href="{% url 'employee_delete' employee.pk %}">Delete</a>
+{% endblock %}

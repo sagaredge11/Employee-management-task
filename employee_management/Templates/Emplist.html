@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Employee List</h1>
+  <ul>
+    {% for employee in employees %}
+      <li><a href="{% url 'employee_detail' employee.pk %}">{{ employee.name }}</a></li>
+    {% empty %}
+      <li>No employees yet.</li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'employee_create' %}">Create New Employee</a>
+{% endblock %}
